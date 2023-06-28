@@ -1,0 +1,33 @@
+<!-- Alternativa 1 utilizando Chat GPT -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1</title>
+  </head>
+  <body>
+    <script>
+      // Solicitar al usuario el ingreso del nombre
+      let nombre = prompt("Por favor, ingresa tu nombre:");
+
+      // Solicitar al usuario que indique su categoría en UADE (docente o alumno)
+      let categoria = prompt("Hola " + nombre + ", ¿eres docente o alumno?");
+
+      // Verificar la categoría y construir el mensaje correspondiente
+      let mensaje = "Hola " + nombre + ", ";
+      
+      if (categoria.toLowerCase() === "docente") {
+        mensaje += "eres docente.";
+      } else if (categoria.toLowerCase() === "alumno") {
+        mensaje += "eres alumno.";
+      } else {
+        mensaje += "no especificaste una categoría válida.";
+      }
+
+      // Imprimir el mensaje en un párrafo
+      document.write("<p>" + mensaje + "</p>");
+    </script>
+    <!-- <script src="ejercicio1.js"></script> -->
+  </body>
+</html>

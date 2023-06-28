@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <h1>Ingreso de Números</h1>
+    <button onclick="ingresarNumeros()">Ingresar Números</button>
+    <div id="numerosContainer"></div>
+
+    <script>
+      function ingresarNumeros() {
+        let numeros = [];
+
+        // Solicitar al usuario el ingreso de 10 números
+        for (let i = 0; i < 10; i++) {
+          let numero = prompt("Ingrese el número #" + (i + 1) + ":");
+          numeros.push(numero);
+        }
+
+        // Imprimir los números en párrafos
+        let numerosContainer = document.getElementById("numerosContainer");
+        numerosContainer.innerHTML = "";
+        for (let i = 0; i < numeros.length; i++) {
+          let numeroParrafo = document.createElement("p");
+          numeroParrafo.textContent = numeros[i];
+          numerosContainer.appendChild(numeroParrafo);
+        }
+      }
+    </script>
+    <!-- <script src="ejercicio5.js"></script> -->
+</body>
+</html>

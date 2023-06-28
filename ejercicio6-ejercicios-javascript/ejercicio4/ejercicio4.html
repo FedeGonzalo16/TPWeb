@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <h1>Cálculo de Sueldo</h1>
+    <label for="valorHora">Valor Hora:</label>
+    <input type="number" id="valorHora">
+    <label for="horasTrabajadas">Horas Trabajadas por Día:</label>
+    <input type="number" id="horasTrabajadas">
+    <label for="antiguedad">Antigüedad (en años):</label>
+    <input type="number" id="antiguedad">
+    <button onclick="calcularSueldo()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+      function calcularSueldo() {
+        // Obtener los valores ingresados por el usuario
+        let valorHora = parseFloat(document.getElementById("valorHora").value);
+        let horasTrabajadas = parseFloat(
+          document.getElementById("horasTrabajadas").value
+        );
+        let antiguedad = parseInt(document.getElementById("antiguedad").value);
+
+        // Calcular el sueldo bruto mensual
+        let sueldoBruto = valorHora * horasTrabajadas * 20; // Suponiendo 20 días trabajados en el mes
+
+        // Calcular el descuento por aportes (20% del sueldo bruto)
+        let descuentoAportes = sueldoBruto * 0.2;
+
+        // Calcular el plus según la antigüedad
+        let plusAntiguedad = 0;
+        if (antiguedad >= 5 && antiguedad <= 10) {
+          plusAntiguedad = 1000;
+        } else if (antiguedad > 10) {
+          plusAntiguedad = 1500;
+        }
+
+        // Calcular el sueldo neto mensual (sueldo bruto - descuento por aportes + plus por antigüedad)
+        let sueldoNeto = sueldoBruto - descuentoAportes + plusAntiguedad;
+
+        // Mostrar los resultados
+        let mensaje =
+          "Sueldo Bruto Mensual: $" +
+          sueldoBruto.toFixed(2) +
+          "<br>" +
+          "Sueldo Neto Mensual: $" +
+          sueldoNeto.toFixed(2);
+        document.getElementById("resultado").innerHTML = mensaje;
+      }
+    </script>
+    <!-- <script src="ejercicio4.js"></script> -->
+</body>
+</html>

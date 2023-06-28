@@ -1,0 +1,35 @@
+<!-- Alternativa 1 utilizando Chat GPT -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <h1>Verificar si un número es par o impar</h1>
+    <label for="numero">Ingrese un número:</label>
+    <input type="number" id="numero">
+    <button onclick="verificarParImpar()">Verificar</button>
+    <p id="resultado"></p>
+    
+    <script>
+        function verificarParImpar() {
+        // Obtener el valor ingresado por el usuario
+        let numero = parseInt(document.getElementById("numero").value);
+
+        // Verificar si el número es par o impar
+        let resultado = "";
+        if (numero % 2 === 0) {
+          resultado = "El número " + numero + " es par.";
+        } else {
+          resultado = "El número " + numero + " es impar.";
+        }
+
+        // Mostrar el resultado en el párrafo de resultado
+        document.getElementById("resultado").textContent = resultado;
+      }
+    </script>
+    <!-- <script src="ejercicio2.js"></script> -->
+</body>
+</html>

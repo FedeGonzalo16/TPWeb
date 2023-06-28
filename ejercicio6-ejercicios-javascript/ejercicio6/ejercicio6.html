@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <h1>Ingreso de Números</h1>
+    <button onclick="ingresarNumeros()">Ingresar Números</button>
+    <p id="numerosParrafo"></p>
+
+    <script>
+      function ingresarNumeros() {
+        let numeros = [];
+
+        // Solicitar al usuario el ingreso de 10 números
+        for (let i = 0; i < 10; i++) {
+          let numero = prompt("Ingrese el número #" + (i + 1) + ":");
+          numeros.push(numero);
+        }
+
+        // Crear el texto con los números ingresados
+        let numerosTexto = "Los números ingresados son: ";
+        for (let i = 0; i < numeros.length; i++) {
+          numerosTexto += numeros[i];
+          if (i < numeros.length - 1) {
+            numerosTexto += ", ";
+          }
+        }
+
+        // Mostrar el texto en el párrafo
+        let numerosParrafo = document.getElementById("numerosParrafo");
+        numerosParrafo.textContent = numerosTexto;
+      }
+    </script>
+    <!-- <script src="ejercicio6.js"></script> -->
+</body>
+</html>

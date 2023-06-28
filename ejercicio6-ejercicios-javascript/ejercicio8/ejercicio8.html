@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 8</title>
+  </head>
+  <body>
+    <script>
+      function generarNumeroAzar() {
+        let respuesta = confirm("¿Desea generar un número al azar?");
+
+        if (respuesta) {
+          let numero = Math.floor(Math.random() * 11); // Generar número al azar entre 0 y 10
+          alert("Número generado: " + numero);
+          generarNumeroAzar(); // Llamar recursivamente a la función para generar más números
+        } else {
+          alert("Programa terminado.");
+        }
+      }
+
+      generarNumeroAzar(); // Iniciar la generación de números al azar
+    </script>
+    <!-- <script src="ejercicio8.js"></script> -->
+  </body>
+</html>

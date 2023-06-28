@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <title>Lanzamiento de Dado</title>
+  </head>
+  <body>
+    <h1>Lanzamiento de Dado</h1>
+    <button onclick="lanzarDado()">Lanzar Dado</button>
+    <ul id="numerosLista"></ul>
+    <p id="cantidadNumero4"></p>
+
+    <script>
+      function lanzarDado() {
+        let numeros = [];
+        let cantidadNumero4 = 0;
+
+        while (true) {
+          let numero = Math.floor(Math.random() * 6) + 1; // Generar número aleatorio entre 1 y 6
+          numeros.push(numero);
+          let listaNumeros = document.getElementById("numerosLista");
+          let nuevoItem = document.createElement("li");
+          nuevoItem.textContent = numero;
+          listaNumeros.appendChild(nuevoItem);
+
+          if (numero === 6) {
+            break;
+          } else if (numero === 4) {
+            cantidadNumero4++;
+          }
+        }
+
+        let cantidadNumero4Texto = "Cantidad de veces que se obtuvo el número 4: " + cantidadNumero4;
+        let cantidadNumero4Parrafo = document.getElementById("cantidadNumero4");
+        cantidadNumero4Parrafo.textContent = cantidadNumero4Texto;
+      }
+    </script>
+    <!-- <script src="ejercicio9.js"></script> -->
+</body>
+</html>

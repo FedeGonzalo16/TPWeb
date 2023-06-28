@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <h1>Ingreso de Números</h1>
+    <button onclick="calcularEstadisticas()">Calcular Estadísticas</button>
+    <p id="resultado"></p>
+
+    <script>
+      function calcularEstadisticas() {
+        var numeros = [];
+
+        // Solicitar al usuario el ingreso de 10 números
+        for (var i = 0; i < 10; i++) {
+          var numero = prompt("Ingrese el número #" + (i + 1) + ":");
+          numeros.push(parseInt(numero));
+        }
+
+        var cantidadPares = 0;
+        var cantidadImpares = 0;
+        var sumaPares = 0;
+        var sumaImpares = 0;
+
+        // Calcular la cantidad de números pares, impares y sus respectivas sumas
+        for (var i = 0; i < numeros.length; i++) {
+          if (numeros[i] % 2 === 0) {
+            cantidadPares++;
+            sumaPares += numeros[i];
+          } else {
+            cantidadImpares++;
+            sumaImpares += numeros[i];
+          }
+        }
+
+        // Determinar qué grupo (pares o impares) sumó la mayor cantidad
+        var grupoMayorSuma = "";
+        var mayorSuma = 0;
+        if (sumaPares > sumaImpares) {
+          grupoMayorSuma = "pares";
+          mayorSuma = sumaPares;
+        } else if (sumaImpares > sumaPares) {
+          grupoMayorSuma = "impares";
+          mayorSuma = sumaImpares;
+        }
+
+        // Mostrar los resultados
+        var resultado = "Cantidad de números pares: " + cantidadPares +
+                        "<br>Cantidad de números impares: " + cantidadImpares +
+                        "<br>Suma de números pares: " + sumaPares +
+                        "<br>Suma de números impares: " + sumaImpares +
+                        "<br>Grupo con mayor suma: " + grupoMayorSuma +
+                        "<br>Mayor suma: " + mayorSuma;
+
+        document.getElementById("resultado").innerHTML = resultado;
+      }
+    </script>
+    <!-- <script src="ejercicio7.js"></script> -->
+</body>
+</html>

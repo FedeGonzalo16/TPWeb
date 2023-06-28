@@ -1,0 +1,79 @@
+/* Ej 1 */
+.bg_red {
+    background-color: rgb(255, 0, 0);
+}
+/* Ej 2 */
+.bg_repeat {
+    background-image: url("/img/modulo.png");
+    background-repeat: repeat;
+}
+/* Ej 3 */
+.bg_no_repeat {
+    background-image: url("/img/modulo.png");
+    background-repeat: no-repeat;
+}
+/* Ej 4 */
+.bg_position_bottom_right {
+    background-image: url("/img/modulo.png");
+    background-position: bottom right;
+}
+/* Ej 5 */
+.bg_gradient_vertical {
+    background: linear-gradient(blue,lightblue);
+    background-repeat: no-repeat;
+    width: 100vh;
+    height: 100vh;
+}
+/* Ej 6 */
+.bg_gradient_horizontal {
+    background: linear-gradient(90deg,blue,lightblue);
+    background-repeat: no-repeat;
+    width: 100vh;
+    height: 100vh;
+}
+/* Ej 7 */
+.bg_gradient_diagonal {
+    background: linear-gradient(45deg, blue, lightblue);
+    background-repeat: no-repeat; 
+    width: 100vw; 
+    height: 100vh;
+}
+/* Ej 8 */
+.bg_img_fixed {
+    background: fixed;
+    background-image: url(img/paisaje.jpg);
+}
+/* Ej 9 */
+.bg_img_height {
+    background-image: url(img/paisaje.jpg);
+    background-repeat: no-repeat; 
+    height: 100vh;
+    background-size: contain;
+}
+/* Ej 10 */
+.bg_repeat_x_y {
+    background-image: url(img/patron.png);
+    background-repeat: repeat-x, repeat-y;
+    background-size: contain;
+}
+/* Ej 11*/
+.bg_img_repeat_x {
+    background-image: url(img/patron.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    width: 100vh;
+}
+/* Ej 12 */
+.bg_img_no_repeat_cover {
+    background-image: url(img/paisaje.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* Ej 13 */
+.bg_imgs {
+    background-image: url(img/compuesto1.jpg), url(img/compuesto2.jpg);
+    background-repeat: no-repeat;
+    background-size: 75% 100vh, 25% 100vh;
+    background-position: top left, top right;
+    color: #fff;
+}
